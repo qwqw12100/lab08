@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 for var in {0..3}
 do
@@ -7,6 +7,6 @@ done
 
 for var in {0..15}
 do
-	./setbit.sh "$var"
+	./setbits.sh "$var"
 	sleep 1
 done
