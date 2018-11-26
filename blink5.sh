@@ -7,15 +7,16 @@ done
 
 for i in {0..4}; 
 do
-	gpio  write 0 1
-	gpio  write 1 1
-	gpio  write 2 1
-	gpio  write 3 1
+	for val in {0..3}
+	do
+		gpio write $val 1
+	done
+
 	sleep 1
-	gpio  write 0 0
-	gpio  write 1 0 
-	gpio  write 2 0 
-	gpio  write 3 0
-	sleep 1
+
+        for val in {0..3}
+        do
+                gpio write $val 0
+done
 	
 done

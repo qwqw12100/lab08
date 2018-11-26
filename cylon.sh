@@ -7,40 +7,18 @@ done
 
 
 for ((i=1;i<10;))
- do 
-        gpio write 0 1 
-   	gpio write 1 0 
-	gpio write 2 0 
-	gpio write 3 0
-	sleep 0.25
+do
+
+     for val in {0,1,2,3,2,1}
+	do
+		gpio write $val 1
+		sleep 0.25
+
+     for val in {0..3}
+        do
+                gpio write $val 0
+     done
+
+done
 	
-	gpio write 0 0 
-	gpio write 1 1 
-	gpio write 2 0 
-	gpio write 3 0
-	sleep 0.25
-	
-	gpio write 0 0 
-	gpio write 1 0 
-	gpio write 2 1 
-	gpio write 3 0
-	sleep 0.25
-	
-	gpio write 0 0 
-	gpio write 1 0 
-	gpio write 2 0 
-	gpio write 3 1
-	sleep 0.25
-	
-	gpio write 0 0 
-	gpio write 1 0 
-	gpio write 2 1 
-	gpio write 3 0
-	sleep 0.25
-	
-	gpio write 0 0 
-	gpio write 1 1 
-	gpio write 2 0 
-	gpio write 3 0
-	sleep 0.25	
 done
